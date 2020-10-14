@@ -4,7 +4,6 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace BankAccount.Resources
 {
     public enum AccountStatus
