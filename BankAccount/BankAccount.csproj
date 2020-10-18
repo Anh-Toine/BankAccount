@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,10 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\NumberValueException.cs" />
+    <Compile Include="Exceptions\IllegalSavingsMenuOptionException.cs" />
+    <Compile Include="Exceptions\IllegalMainMenuOptionException.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Account.cs" />
+    <Compile Include="Resources\ChequingAccount.cs" />
+    <Compile Include="Resources\GlobalSavingsAccount.cs" />
     <Compile Include="Resources\IAccount.cs" />
+    <Compile Include="Resources\IExchangeable.cs" />
+    <Compile Include="Resources\SavingsAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

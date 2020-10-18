@@ -8,8 +8,10 @@ namespace BankAccount.Resources
 {
     interface IAccount
     {
-        void MakeWithdrawl(double amount);
+        void MakeWithdrawal(double amount);
         void MakeDeposit(double amount);
         void CalculateInterest();
+
+        string CloseAndReport();
     }
 }
