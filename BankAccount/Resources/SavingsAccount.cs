@@ -23,12 +23,27 @@ namespace BankAccount.Resources
         {
 
             base.MakeDeposit(amount);
-            if (account == AccountStatus.Inactive && base.CurrentBalance > 25)
+            if (account == AccountStatus.Inactive && CurrentBalance > 25)
             {
                 account = AccountStatus.Active;
-
+                base.MakeDeposit(amount);
             }
 
+        }
+        public void CloseAndReport()
+        {
+            if (NumberWithdrawal > 4)
+            {
+                for (int v = 0; NumberWithdrawal > 4; v++)
+                {
+                    ServiceCharge += 1;
+                }
+            }
+            if (CurrentBalance < 25)
+            {
+                AccountStatus = AccountStatus.Inactive;
+            }
+            base.CloseAndReport();
         }
     }
 }

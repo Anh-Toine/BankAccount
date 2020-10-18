@@ -28,6 +28,7 @@ namespace BankAccount.Resources
         public double NumberWithdrawal { get; set; }
         public double InterestRate { get; set; }
         public double ServiceCharge{ get; set; }
+        
         public AccountStatus AccountStatus;
         public Account(double balance, double interestRate)
             {
@@ -75,7 +76,7 @@ namespace BankAccount.Resources
 
                 PercentageChange = (CurrentBalance - StartingBalance) / StartingBalance;
                 builder.Append(String.Format("Percentage change: {0:P2}",PercentageChange));
-                
+                Console.WriteLine(builder.ToString());
                 return builder.ToString();
             }
         
